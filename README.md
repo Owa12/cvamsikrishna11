@@ -1,16 +1,21 @@
-### Hi there 👋
+#!/bin/bash    
 
-<!--
-**cvamsikrishna11/cvamsikrishna11** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# update the system
+sudo yum update -y
 
-Here are some ideas to get you started:
+# Install Apache HTTP Server (httpd)
+sudo yum Install httpd -y
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+# Install Git
+sudo yum install git -y
+
+
+# clone the  repository
+git clone https ://github.com/cvamsikrishna11/ecommerce-web-app.git
+
+# copy the files inside the cloned folder to the desired location
+sudo cp -r ecommerce-web-app/server1/* /var/www/html/
+
+# Start and enable the HTTP server
+sudo systemctl start httpd 
+sudo systemctl enable httpd
